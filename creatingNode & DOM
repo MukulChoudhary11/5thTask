@@ -1,5 +1,45 @@
 //5th Task....
 
+//defining
 var item=document.querySelector('#items');
+
+//parentElement
 item.parentElement.style.backgroundColor='#f4f4f4';
 item.parentElement.parentElement.style.backgroundColor='yellow';
+
+//lastElementChild & firstElementChild
+item.lastElementChild.style.background='red';
+item.lastElementChild.textContent='Hello';
+item.firstElementChild.textContent='Hello';
+item.firstElementChild.style.background='blue';
+
+//previousElementSibling && nextElementSibling
+item.previousElementSibling.style.background='yellow';
+item.nextElementSibling.style.background='green';
+
+//creating child
+var newdiv=document.createElement('div');
+
+//adding name
+newdiv.className='hello';
+
+//adding id
+newdiv.id='hello1';
+
+//adding attribute
+newdiv.setAttribute('title','Hello Div');
+
+//creating textNode
+var newdivText=document.createTextNode('Hello World');
+
+//appending with element
+newdiv.appendChild(newdivText);
+
+//adding into DOM (before it was only in js)
+var cont=document.querySelector('header .container');
+var h1=document.querySelector('header h1');
+cont.insertBefore(newdiv,h1);
+
+//now we can use newdiv
+newdiv.style.fontSize='25px';  //changing font size
+newdiv.style.color='yellow';  //changing text-color.
